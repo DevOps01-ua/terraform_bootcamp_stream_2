@@ -24,7 +24,7 @@ data "aws_iam_policy_document" "allow_access_from_another_account" {
     ]
 
     resources = [
-      "arn:aws:s3:::workshop-devops01/*"
+      "/*" #bucket_arn+/path
     ]
     sid       = "AllowCloudFrontServicePrincipal"
     condition {
